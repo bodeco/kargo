@@ -1,0 +1,8 @@
+---
+dependencies:
+  - role: download
+    file: "{{ downloads.kubednsmasq }}"
+    when: not skip_dnsmasq_k8s|default(false)
+  - role: download
+    file: "{{ downloads.kubedns }}"
+    when: not skip_dnsmasq_k8s|default(false)
